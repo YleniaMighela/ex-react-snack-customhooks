@@ -1,12 +1,23 @@
-import useSwitch from "./useSwitch";
+// import useSwitch from "./useSwitch";
+import useDate from "./useDate";
+
+
 
 function App() {
-  const [isOn, toggle] = useSwitch();
+  // const [isOn, toggle] = useSwitch();
+  const currentDate = useDate();
 
   return (
+    //  snack 01
+    // <div>
+    //   <h1>Il valore è: {isOn ? "ON" : "OFF"}</h1>
+    //   <button onClick={toggle}>Cambia Stato</button>
+    // </div>
+
+    // snack02
     <div>
-      <h1>Il valore è: {isOn ? "ON" : "OFF"}</h1>
-      <button onClick={toggle}>Cambia Stato</button>
+      <h1>Data e ora attuali:</h1>
+      <p>{currentDate.toLocaleString()}</p>
     </div>
   );
 }
